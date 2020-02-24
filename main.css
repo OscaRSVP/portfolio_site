@@ -1,0 +1,221 @@
+:root {
+  --background-color: #ccc;
+  --secondary-color: #f4f4f4;
+  --header-color: #0072bb;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--background-color);
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
+h2,
+h3 {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 95%;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+/* Header & Nav Section */
+
+header {
+  background: var(--header-color);
+  padding: 1.1rem 2rem;
+  color: #fff;
+}
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-nav ul li {
+  margin: 0 0.9rem;
+}
+.main-nav ul li a {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* Main Section Area / Including Aside */
+
+main {
+  display: flex;
+  margin: 1rem;
+}
+
+#section-info {
+  width: 80%;
+}
+#section-info .about-me {
+  background: var(--secondary-color);
+  margin-right: 1.5rem;
+  padding: 1rem;
+}
+#section-info .about-me p {
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+#section-info .about-me img {
+  height: 350px;
+}
+#section-info .about-me2 {
+  margin-top: 1rem;
+}
+
+/* Aside Content */
+
+#about-me {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+#about-me .about-info {
+  background: var(--secondary-color);
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+}
+#about-me .about-info img {
+  margin: 1rem 0;
+}
+#about-me .about-info p {
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+#about-me .my-interest {
+  background: var(--secondary-color);
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+}
+#about-me .my-interest h2 {
+  margin: 1rem 0;
+}
+#about-me .my-interest ul {
+  flex-direction: column;
+}
+#about-me .my-interest ul li {
+  background: #b3b3b3;
+  padding: 1rem;
+}
+#about-me .my-interest ul li:nth-child(odd) {
+  background: #ccc;
+}
+#about-me .social-links {
+  background: var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
+}
+#about-me .social-links .social {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+}
+
+/* Form Section */
+
+.form-section {
+  max-width: 400px;
+  padding: 2rem;
+  margin: 2.5rem auto;
+  background: var(--secondary-color);
+}
+.form-section h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.form-section h1,
+.form-section p {
+  text-align: center;
+}
+.form-section p {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+.form-section .form-info .form-type {
+  margin-top: 1rem;
+}
+.form-section .form-info .form-type label {
+  display: block;
+  color: #333;
+}
+.form-section .form-info .form-type input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-section .form-info .form-type textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-section .form-info button[type="submit"] {
+  padding: 0.6rem 1rem;
+  background: #0072bb;
+  color: #fff;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #section-info {
+    width: 100%;
+  }
+  #section-info .about-me {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  #about-me {
+    width: 100%;
+  }
+  #about-me .social-links {
+    width: 70%;
+    align-self: center;
+  }
+}
+
+@media (max-width: 560px) {
+  header {
+    padding: 1rem 0;
+  }
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
